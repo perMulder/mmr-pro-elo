@@ -1,0 +1,114 @@
+.Navbar {
+
+    display: grid;
+    grid-template-columns: 1fr $nav-height;
+    grid-template-rows: $nav-height 1fr;
+    align-items: center;
+    // position: sticky;
+    position: fixed;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    width: 100%;
+
+    background-color: $nav-bg-color;
+    border-bottom: 2px solid $nav-accent-color;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    &__logo {
+        background-image: url(/img/logo.png);
+        background-size: cover;
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-left: 1rem;
+    }
+
+    &__burger {
+        height: 100%;
+        width: 100%;
+        button {
+            // all: unset;
+            cursor: pointer;
+            background: inherit;
+            outline: 0;
+            border: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            i {
+                color: $nav-burger-color;
+            }
+        }
+    }
+
+    &__menu {
+        grid-column: 1 / -1;
+        // display: grid;
+        display: none;
+
+        &-active {
+            display: grid;
+        }
+
+        a {
+
+            padding: 1rem .5rem;
+
+            &:nth-child(odd) {
+                background: $nav-bg-color;
+            }
+
+            &:hover {
+                background: darken($nav-bg-color, 20%);
+            }
+        }
+        
+        // align-self: flex-end;
+        // justify-self: flex-end;
+    }
+
+    @include medium {
+
+        grid-template-columns: 1fr 1fr $nav-height;
+
+        &__menu {
+            // grid-column: initial;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            grid-column: 2 / -1;
+            grid-row: 1 / 2;
+            height: 100%;
+
+            * {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                padding: $nav-item-padding;
+                background: $nav-bg-color;
+                // padding: 1rem;
+                &:hover {
+                    background: darken($nav-bg-color, 20%);
+                }
+            }
+            a {
+                padding: $nav-item-padding;
+                &:hover {
+                    background: darken($nav-bg-color, 20%);
+                }
+            }
+        }
+        &__burger {
+            display: none;
+            // grid-column: -1 / -2;
+        }
+    }
+
+}

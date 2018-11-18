@@ -1,0 +1,26 @@
+@import 'vars';
+@import 'utils';
+@import './components/components.scss';
+
+*, 
+*::before, 
+*::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: $family-serif;
+    // font-weight: 100;
+    // font: {
+    //     weight: 100;
+    // }
+
+    background: {
+        // color: color(primary);
+    }
+}
+.App {
+    position: relative;
+}

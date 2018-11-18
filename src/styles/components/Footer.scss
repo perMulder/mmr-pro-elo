@@ -1,0 +1,21 @@
+.Footer {
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: color(light-gray);
+    height: 6rem;
+
+    p {
+        padding: 1rem;
+        margin: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: color(accent);
+        &:visited {
+            color: color(accent);
+        }
+    }
+}

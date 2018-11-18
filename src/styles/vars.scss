@@ -1,0 +1,25 @@
+
+$family-serif: 'Roboto', sans-serif;
+
+//Navbar
+$nav-height: 5rem;
+$nav-bg-color: /*rgba(235, 235, 235, 0.918);*/ white;
+$nav-accent-color: rgb(184, 184, 184);
+$nav-burger-color: black;
+$nav-item-padding: 0 2rem;
+
+$colors: (
+    primary: #333,
+    accent: hsl(348, 100%, 61%),
+    accent2: rgb(253, 53, 53),
+    pinky: #F59,
+    light-gray: rgb(241, 240, 240),
+
+    font-light: white,
+    font-dark: black
+);
+
+@function color($c){
+    @return map-get($colors, $c);
+}
+

@@ -1,0 +1,12 @@
+$medium-breakpoint: 600px;
+$big-breakpoint: 1000px;
+
+@mixin small {
+    @content;
+}
+
+@mixin medium {
+    @media (min-width: $medium-breakpoint) {
+        @content;
+    }
+}
